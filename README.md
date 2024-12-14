@@ -4,7 +4,7 @@
 
 **App Description:** This application is a coffee recommendation and ordering platform that allows users to explore premium, organic coffee beans, take a personalized quiz, and place orders, with all user and order data stored in MongoDB for efficient management. It integrates the Fake Coffee API to fetch coffee details, ensuring a dynamic and rich user experience.
 
-**YouTube Video Link:** https://www.youtube.com/MyAmazingAPP
+**YouTube Video Link:** https://youtu.be/SgFVb-nkNeY
 
 **APIs:** Products (https://fake-coffee-api.vercel.app/api)
 
