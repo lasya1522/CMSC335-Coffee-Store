@@ -6,6 +6,28 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="styles.css" type="text/css" />
 	<title>Select Coffee</title>
+	<style>
+		/* .table-image {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+		} */
+
+		.table-image img {
+			margin-bottom: 5px;
+			width: 60px;
+			height: 60px;
+		}
+
+		.empty-message {
+			text-align: center;
+			font-size: 1.2em;
+			color: #6b4f3a;
+			font-family: 'Raleway';
+
+		}
+	</style>
 </head>
 
 <body>
@@ -19,21 +41,26 @@
 	</div>
 	<h1>Select Your Coffee</h1>
 	<hr>
-	<% if (coffees.length > 0) { %>
-		<form action="/order" method="post">
+	<form action="/order" method="post">
+		<% if (coffees.length === 0) { %>
+			<p class="empty-message">We currently do not have any coffee items that match your preferences! Please check back later!</p>
+		<% } else { %>
 			<table class="tb-border">
 				<tr class="tb-border">
-					<th class="tb-border">Item</th>
+					<th class="tb-border">Image</th>
+					<th class="tb-border">Name</th>
 					<th class="tb-border">Description</th>
-					<th class="tb-border">Flavor Profile</th>
+					<th class="tb-border">Flavors</th>
 					<th class="tb-border">Price</th>
 					<th class="tb-border">Select</th>
 				</tr>
 				<% coffees.forEach(coffee => { %>
 				<tr class="tb-border">
 					<td class="tb-border">
-						<img src="<%= coffee.image_url %>" alt="<%= coffee.name %>" width="100px" height="100px">
-						<span><%= coffee.name %></span>
+						<img src="<%= coffee.image_url %>" alt="<%= coffee.name %>">
+					</td>
+					<td class="tb-border">
+						<strong><%= coffee.name %></strong>
 					</td>
 					<td class="tb-border"><%= coffee.description %></td>
 					<td class="tb-border"><%= coffee.flavor_profile %></td>
@@ -51,10 +78,8 @@
 				<button type="submit">Place Order</button>
 			</div>
 			<p>&nbsp;</p>
-		</form>
-	<% } else { %>
-		<p>Oh no! We currently do not have any coffee items that match your preferences! Please check back later!</p>
-	<% } %>
+		<% } %>
+	</form>
 </body>
 
 </html>
