@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css" type="text/css" />
+	<title>Select Coffee</title>
+</head>
+
+<body>
+	<div id="tabs">
+		<ul id="link-nav">
+			<li><a href="/home"><span>Home</span></a></li>
+			<li><a href="/form"><span>Take the Quiz!</span></a></li>
+			<li><a href="#" class="current"><span>Coffee Recommendations</span></a></li>
+			<li><a href="/logout"><span>Logout</span></a></li>
+		</ul>
+	</div>
+	<h1>Select Your Coffee</h1>
+	<hr>
+	<form action="/order" method="post">
+		<table class="tb-border">
+			<tr class="tb-border">
+				<th class="tb-border">Item</th>
+				<th class="tb-border">Price</th>
+				<th class="tb-border">Select</th>
+			</tr>
+			<% coffees.forEach(coffee => { %>
+			<tr class="tb-border">
+				<td class="tb-border">
+					<img src="<%= coffee.image_url %>" alt="<%= coffee.name %>" width="30px" height="30px">
+					<span><%= coffee.name %></span>
+				</td>
+				<td class="tb-border" align="right">$<%= coffee.price.toFixed(2) %></td>
+				<td class="tb-border">
+					<label>
+						<input type="checkbox" name="selected_coffees" value="<%= coffee.id %>">
+					</label>
+				</td>
+			</tr>
+			<% }) %>
+		</table>
+		<p></p>
+		<div>
+			<button type="submit">Place Order</button>
+		</div>
+		<p>&nbsp;</p>
+	</form>
+</body>
+
+</html>

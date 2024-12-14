@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css" type="text/css" />
+	<title>Order Summary</title>
+</head>
+
+<body>
+	<div id="tabs">
+		<ul id="link-nav">
+			<li><a href="/home"><span>Home</span></a></li>
+            <li><a href="/form"><span>Take the Quiz!</span></a></li>
+			<li><a href="#" class="current"><span>Order Summary</span></a></li>
+			<li><a href="/logout"><span>Logout</span></a></li>
+		</ul>
+	</div>
+	<h1>Order Summary</h1>
+	<hr>
+	<div class="home-welcome">
+		<p><strong>Your order has been successfully placed.</strong></p>
+		<p><em>Your order includes the following items: </em></p>
+	</div>
+	<table class="tb-border">
+		<tr class="tb-border">
+			<th class="tb-border">Item</th>
+			<th class="tb-border">Price</th>
+		</tr>
+		<% selectedCoffees.forEach(coffee => { %>
+			<tr class="tb-border">
+				<td class="tb-border">
+					<img src="<%= coffee.image_url %>" alt="<%= coffee.name %>" width="30px" height="30px">
+					<span><%= coffee.name %></span>
+				</td>
+				<td class="tb-border" align="right">$<%= coffee.price.toFixed(2) %></td>
+			</tr>
+		<% }) %>
+		<tr class="tb-border">
+			<td class="tb-border" align="right">
+				<strong>Total Cost: </strong>
+			</td>
+			<td class="tb-border" align="right"><strong>$<%= totalCost %></strong></td>
+		</tr>
+	</table>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css" type="text/css" />
+	<title>Home</title>
+</head>
+
+<body>
+	<div id="tabs">
+		<ul id="link-nav">
+			<li><a href="#" class="current"><span>Home</span></a></li>
+			<li><a href="/form"><span>Take the Quiz!</span></a></li>
+			<li><a href="/order"><span>Coffee Recommendations</span></a></li>
+			<li><a href="/logout"><span>Logout</span></a></li>
+		</ul>
+	</div>
+	<h1>Home</h1>
+	<hr>
+	<% if(typeof username !== "undefined") { %>
+		<div class="home-username">
+			Welcome <strong> <%= username.toUpperCase() %></strong> ...
+			<br><p></p>
+		</div>
+	<% } %> 
+	<div class="home-welcome">
+		<p>
+			Welcome to our coffee haven, where you can explore and order the finest organic coffee beans, 
+			crafted for <em><strong>rich</strong></em> and <em><strong>exotic</strong></em> flavors. 
+		</p>
+		<p>
+			Simply click on <em><strong>Take the Quiz!</strong></em> in the menu above to get started!
+
+		</p>
+		
+	</div>
+</body>
+
+</html>

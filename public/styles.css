@@ -1,0 +1,275 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #d3cbbb; /* Softer cream color for the background */
+    color: #3d2a1f;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* login */
+.p {
+    background-color: #d3cbbb;
+}
+/* Form Container */
+.form-container {
+    background-color: #ebe4d8; /* Light beige for a clean, modern look */
+    border-radius: 12px;
+    margin: 0 auto;
+    padding: 35px;
+    width: 300px;
+    box-shadow: 0 10px 20px rgba(61, 42, 31, 0.3); /* Softer shadow */
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #6b4f3a; /* Deep coffee tone */
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #4d372a; /* Muted coffee tone */
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #f8f8f8; /* Neutral light background */
+}
+
+/* Form errors/welcome */
+.login-failed {
+    text-align: center;
+    background-color: #fef6f6;
+    color: #d9534f; /* Alert red for errors */
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.home-welcome {
+    text-align: center;
+    background-color: #d3cbbb;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+.home-username {
+    text-align: center;
+    color: #337ab7; /* Friendly blue tone */
+}
+
+p {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    align-items: center;
+}
+
+/* menu links */
+#tabs {
+    float: left;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    line-height: normal;
+}
+
+ul#link-nav {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    position: relative;
+    display: flex;
+    background: transparent;
+    font-family: 'Raleway', sans-serif;
+    border-bottom: 2px solid #874b46;
+}
+
+ul#link-nav li {
+    margin: 0;
+    padding: 0;
+}
+
+ul#link-nav li a {
+    display: block;
+    color: #6b4f3a;
+    text-decoration: none;
+    padding: 12px 15px;
+    transition: all 0.3s;
+}
+
+ul#link-nav li a:hover {
+    background-color: #ebe4d8; /* Light hover background */
+    border-radius: 5px;
+}
+
+ul#link-nav li a.current {
+    color: white;
+    background-color: #6b4f3a; /* Active state color */
+    border-radius: 5px;
+}
+
+/* Header Styling */
+h1 {
+    font-size: 2rem;
+    color: #6b4f3a;
+    margin-bottom: 15px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    height: 1px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #4d372a;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #6b4f3a;
+    box-shadow: 0 0 6px rgba(107, 79, 58, 0.4);
+    outline: none;
+}
+
+/* Button Group Styling */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+button {
+    width: 48%;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.reset-btn {
+    background-color: #e7d4c5; /* Softer neutral tone */
+    color: #3d2a1f;
+}
+
+.submit-btn {
+    background-color: #6b4f3a;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Focused styles */
+input:focus, select:focus {
+    border-color: #3d2a1f;
+    box-shadow: 0 0 10px rgba(61, 42, 31, 0.2);
+}
+
+.tb-border {
+    border: 2px solid #3d2a1f;
+}
+
+
+/* Coffee List Styling */
+.coffee-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.coffee-item {
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid #ccc;
+    padding: 15px 0;
+}
+
+.coffee-item:last-child {
+    border-bottom: none;
+}
+
+.coffee-img {
+    max-width: 100px;
+    max-height: 100px;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+
+.coffee-item h3 {
+    margin: 0 0 10px;
+    color: #6b4f3a;
+}
+
+.coffee-item p {
+    margin: 5px 0;
+    color: #4d372a;
+}
+
+/* Table Border and Cell Styling */
+
+/* Make table borders visible */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table, th, td {
+    border: 2px solid #3d2a1f;
+}
+
+/* Dramatically shrink the images */
+table img {
+    max-width: 100px;
+    height: auto;
+}
+
+.tb-border th, .tb-border td {
+    padding: 12px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.tb-border th {
+    background-color: #6b4f3a; /* Coffee tone header */
+    color: white;
+}
+
+.tb-border tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alternating row color */
+}
+
+.tb-border tr:hover {
+    background-color: #ebe4d8; /* Light hover color */
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Preferences</title>
+    <link rel="stylesheet" href="styles.css" class="css" />
+</head>
+<body>
+    <div id="tabs">
+		<ul id="link-nav">
+			<li><a href="/home"><span>Home</span></a></li>
+			<li><a href="#" class="current"><span>Take the Quiz!</span></a></li>
+			<li><a href="/order"><span>Coffee Recommendations</span></a></li>
+			<li><a href="/logout"><span>Logout</span></a></li>
+		</ul>
+	</div>
+    <div class="form-container">
+        <h1>Tell us your coffee preferences!</h1>
+        <form action="/filter" method="post">
+            <div class="form-group">
+                <label>Roast Level (1-5):</label>
+                <input type="number" name="roast" min="1" max="5" required />
+            </div>
+            
+            <div class="form-group">
+                <label>Price:</label>
+                <select name="price" required>
+                    <option value="$"> $ (Below $10.00)</option>
+                    <option value="$$">$$ ($10-$13)</option>
+                    <option value="$$$">$$$ (Above $13)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Flavor:</label>
+                <select name="flavor" required>
+                    <option value="Chocolate">Chocolate</option>
+                    <option value="Nutty">Nutty</option>
+                    <option value="Fruity">Fruity/Citrus</option>
+                    <option value="Rich">Rich/Earthy</option>
+                </select>
+            </div>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+    </div>
+</body>
+</html>
